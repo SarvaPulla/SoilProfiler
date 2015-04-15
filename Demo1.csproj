@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12FC3316-2226-4A66-B0EB-19EA2CC9D207}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo1</RootNamespace>
+    <AssemblyName>Demo1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotSpatial.Analysis, Version=1.7.0.0, Culture=neutral, PublicKeyToken=df3f45fb0fe4cb0c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\DotSpatial_Full.1.7\DotSpatial.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Compatibility, Version=1.7.0.0, Culture=neutral, PublicKeyToken=094c8fdea7f4a002, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\DotSpatial_Full.1.7\DotSpatial.Compatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Controls, Version=1.7.0.0, Culture=neutral, PublicKeyToken=4d9e49339a7d240c, processorArchitecture=MSIL" />
+    <Reference Include="DotSpatial.Data, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c29dbf30e059ca9d" />
+    <Reference Include="DotSpatial.Data.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=53ab5a198378d4c1" />
+    <Reference Include="DotSpatial.Extensions, Version=1.7.0.0, Culture=neutral, PublicKeyToken=4d9e49339a7d240c" />
+    <Reference Include="DotSpatial.Modeling.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=712bef29a31a9354" />
+    <Reference Include="DotSpatial.Mono, Version=1.7.0.0, Culture=neutral, PublicKeyToken=425ba4de41127026" />
+    <Reference Include="DotSpatial.Positioning, Version=1.7.0.0, Culture=neutral, PublicKeyToken=f6f66d1554473068, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\DotSpatial_Full.1.7\DotSpatial.Positioning.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Positioning.Design, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b4b0b185210c9dae, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\DotSpatial_Full.1.7\DotSpatial.Positioning.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Positioning.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=3a45fedac1c4cdab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\DotSpatial_Full.1.7\DotSpatial.Positioning.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Projections, Version=1.7.0.0, Culture=neutral, PublicKeyToken=272632bddd08a38b" />
+    <Reference Include="DotSpatial.Projections.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=52099474f11b7ff0" />
+    <Reference Include="DotSpatial.Serialization, Version=1.7.0.0, Culture=neutral, PublicKeyToken=441f200f827611e7" />
+    <Reference Include="DotSpatial.Symbology, Version=1.7.0.0, Culture=neutral, PublicKeyToken=6178c08da7998387" />
+    <Reference Include="DotSpatial.Symbology.Forms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=0544cdeefb662382" />
+    <Reference Include="DotSpatial.Topology, Version=1.7.0.0, Culture=neutral, PublicKeyToken=a66b5e9434ca3671" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\Downloads\ZedGraph_Control_Test\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGraph.Designer.cs">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathPoint.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraph.resx">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
