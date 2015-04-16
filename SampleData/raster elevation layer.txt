@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SoilProfiler
+{
+	class RasterElevationLayerData : IComparable
+	{
+		private string m_file_name = "";
+		private int m_num_pts_skipped = 0;
+		double m_start_distance = 0.0;
+		private double[] m_pt_ditances;
+		private double[] m_elevations;
+		
+		public RasaterElevationLayerData(string file_name, int num_pts_skipped, double[] pt_distances, double[] elevations)
+		{
+			m_file_name = file_name;
+			m_num_pts_skipped = num_pts_skipped;
+			m_pt_distances = pt_distances;
+			m_elevations = elevations;
+		}
+		
+		public RasterElevationLayerData()
+		{
+		}
+		
+		public void setFileName(string file_name) {
+			m_file_name = file_name;
+		}
+		
+		public string getfileName()
+		{
+			return m_file_name;
+		}
+		
+		public void addPointdistances(double[] pt_distances)
+		{
+			m_pt_distances = pt_distances;
+		}
+		
+		public double[] getPointDistances()
+		{
+			return m_pt_distances;
+		}
+		
+		public void addElevations(double[] elevations)
+		{
+			m_elevations = elevations;
+		}
+		
+		public double[] getElevations()
+		{
+			return m_elevations;
+		}
+		
+		public void setPtsSkipped(int pts_skipped)
+		{
+			m_num_pts_skipped = pts_skipped;
+		}
+		
+		public int getPtsSkipped() 
+		{
+			return m_num_pts_skipped;
+		}
+		
+		public double getDistanceValue(int index) {
+			return m_pt_distances[index];
+		}
+		
+		public void setStartDistance(double start_distance)
+		{
+			if (m_start_distance - start_distance !=0)
+			{
+				for (int i = 0; i < m_pt_distances.Count(); i++)
+				{
+					m_pt_distances[i] += (start_distance-m_start_distance);
+				}
+				m_start_distance = start_distance;
+			}
+		}
+		
+		public int CompareTo(object obj)
+		{
+			if (obj == null) return 1;
+			
+			RasterElevationLayerData otherRasterData = obj as RasterElevationLayerData;
+			if (otherRasterData != null)
+				return this.m_num_pts_skipped.CompareTo(otherRasterData.m_num_pts_skipped);
+			else
+				throw new ArgumentException("Object is not Raster Elevation Layer Data");
+		}
+}
+}
+
+		
